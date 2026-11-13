@@ -1,0 +1,179 @@
+/* Define Color Variables for Light & Dark Themes */
+:root {
+    --bg-color: #f9f9f9;
+    --text-color: #333333;
+    --header-bg: #d32f2f;
+    --header-text: #ffffff;
+    --card-bg: #ffffff;
+    --btn-primary-bg: #ffffff;
+    --btn-primary-text: #d32f2f;
+    --btn-secondary-border: #ffffff;
+    --btn-secondary-text: #ffffff;
+    --footer-bg: #333333;
+    --footer-text: #ffffff;
+    --stat-num: #d32f2f;
+}
+
+/* Automatic Dark Mode (Black and Red Theme) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #121212;
+        --text-color: #e0e0e0;
+        --header-bg: #1a1a1a;
+        --header-text: #ff5252;
+        --card-bg: #1e1e1e;
+        --btn-primary-bg: #d32f2f;
+        --btn-primary-text: #ffffff;
+        --btn-secondary-border: #d32f2f;
+        --btn-secondary-text: #ff5252;
+        --footer-bg: #0a0a0a;
+        --footer-text: #b0b0b0;
+        --stat-num: #ff5252;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header Styling */
+.header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #d32f2f;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.tagline {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.navbar a {
+    color: var(--header-text);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.lang-switch button {
+    background: var(--card-bg);
+    color: var(--header-text);
+    border: 1px solid var(--header-text);
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(20, 20, 20, 0.9), rgba(183, 28, 28, 0.85)), url('https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.hero-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.btn-primary {
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--btn-secondary-border);
+    color: var(--btn-secondary-text);
+}
+
+/* Stats Banner */
+.stats-banner {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    margin: 10px;
+}
+
+.stat-card h3 {
+    color: var(--stat-num);
+    font-size: 1.8rem;
+}
+
+.stat-card p {
+    color: var(--text-color);
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.info-section {
+    background: var(--card-bg);
+    color: var(--text-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
